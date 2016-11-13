@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="ReplaceBodyWithAnXMLChild" startOnLoad="true"
+  trace="disable" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+  <target>
+    <inSequence>
+      <enrich description="enrich">
+        <source xpath="//*[local-name()='container']/*[1]"/>
+        <target type="body"/>
+      </enrich>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </target>
+  <publishWSDL uri="http://localhost:8280/services/echo?wsdl"/>
+</proxy>
