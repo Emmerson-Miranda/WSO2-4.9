@@ -320,4 +320,94 @@
          <in>3</in>
       </echo:echoInt>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="fdf2c8f5-2502-4b2b-b3f3-a56d855af2a0" wsaVersion="NONE" name="AddNewElementSoap11Binding" type="wsdl" bindingName="{http://ws.apache.org/axis2}AddNewElementSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8280/services/AddNewElement?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8280/services/AddNewElement?wsdl"><con:part><con:url>http://localhost:8280/services/AddNewElement?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws.apache.org/axis2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://ws.apache.org/axis2" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:types/>
+  <wsdl:message name="in"/>
+  <wsdl:message name="out"/>
+  <wsdl:portType name="AddNewElementPortType">
+    <wsdl:operation name="mediate">
+      <wsdl:input message="tns:in" wsaw:Action="urn:mediate"/>
+      <wsdl:output message="tns:out" wsaw:Action="urn:mediateResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AddNewElementSoap11Binding" type="tns:AddNewElementPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="mediate">
+      <soap:operation soapAction="urn:mediate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AddNewElementSoap12Binding" type="tns:AddNewElementPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="mediate">
+      <soap12:operation soapAction="urn:mediate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AddNewElementHttpBinding" type="tns:AddNewElementPortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="mediate">
+      <http:operation location="mediate"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddNewElement">
+    <wsdl:port name="AddNewElementHttpSoap11Endpoint" binding="tns:AddNewElementSoap11Binding">
+      <soap:address location="http://localhost:8280/services/AddNewElement.AddNewElementHttpSoap11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="AddNewElementHttpsSoap11Endpoint" binding="tns:AddNewElementSoap11Binding">
+      <soap:address location="https://localhost:8243/services/AddNewElement.AddNewElementHttpsSoap11Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="AddNewElementHttpSoap12Endpoint" binding="tns:AddNewElementSoap12Binding">
+      <soap12:address location="http://localhost:8280/services/AddNewElement.AddNewElementHttpSoap12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="AddNewElementHttpsSoap12Endpoint" binding="tns:AddNewElementSoap12Binding">
+      <soap12:address location="https://localhost:8243/services/AddNewElement.AddNewElementHttpsSoap12Endpoint"/>
+    </wsdl:port>
+    <wsdl:port name="AddNewElementHttpsEndpoint" binding="tns:AddNewElementHttpBinding">
+      <http:address location="https://localhost:8243/services/AddNewElement.AddNewElementHttpsEndpoint"/>
+    </wsdl:port>
+    <wsdl:port name="AddNewElementHttpEndpoint" binding="tns:AddNewElementHttpBinding">
+      <http:address location="http://localhost:8280/services/AddNewElement.AddNewElementHttpEndpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8280/services/AddNewElement.AddNewElementHttpSoap11Endpoint</con:endpoint><con:endpoint>https://localhost:8243/services/AddNewElement.AddNewElementHttpsSoap11Endpoint</con:endpoint></con:endpoints><con:operation id="efb3febd-4b5c-41c0-bb5d-2b2233dcb613" isOneWay="false" action="urn:mediate" name="mediate" bindingOperationName="mediate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="32ea63f3-d8b6-43ee-8319-62c6e47d5552" name="AddNewElement-Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8280/services/AddNewElement.AddNewElementHttpSoap11Endpoint</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:echo="http://echo.services.core.carbon.wso2.org">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+         <echo:echoOMElement>
+      	<container>
+	      <echo:echoInt>
+	         <in>33</in>
+	      </echo:echoInt>
+	     </container>
+         	<omEle>anyType</omEle>
+      </echo:echoOMElement>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="24951cd9-31f3-47dd-aaa1-f45ee735bedc" wsaVersion="NONE" name="ReplacePropertySoap11Binding" type="wsdl" bindingName="{http://ws.apache.org/axis2}ReplacePropertySoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8280/services/ReplaceProperty?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8280/services/ReplaceProperty.ReplacePropertyHttpSoap11Endpoint</con:endpoint><con:endpoint>https://localhost:8243/services/ReplaceProperty.ReplacePropertyHttpsSoap11Endpoint</con:endpoint></con:endpoints><con:operation id="160fe51c-f547-46b5-b96a-0dab4ed6a594" isOneWay="false" action="urn:mediate" name="mediate" bindingOperationName="mediate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b64d07e3-029d-4fce-ac9e-a3f513558f6f" name="ReplaceProperty-Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8280/services/ReplaceProperty.ReplacePropertyHttpSoap11Endpoint</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:echo="http://echo.services.core.carbon.wso2.org">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>
+         <echo:echoOMElement>
+      	<container id="myId">
+	      <echo:echoInt>
+	         <in>33</in>
+	      </echo:echoInt>
+	     </container>
+         	<omEle>anyType</omEle>
+      </echo:echoOMElement>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:mediate"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

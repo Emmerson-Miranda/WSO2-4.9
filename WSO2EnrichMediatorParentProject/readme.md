@@ -15,3 +15,21 @@ Replace an element of the body.
 [Source code](https://github.com/Emmerson-Miranda/WSO2-4.9/blob/master/WSO2EnrichMediatorParentProject/EnrichMediatorESB/src/main/synapse-config/proxy-services/ReplaceElementValue.xml "ReplaceElementValue").
 
 ![example](./images/image2.png)
+
+
+## Example 3 - ReplaceProperty.xml
+
+Replace the value of a XML property.
+[Source code](https://github.com/Emmerson-Miranda/WSO2-4.9/blob/master/WSO2EnrichMediatorParentProject/EnrichMediatorESB/src/main/synapse-config/proxy-services/ReplaceProperty.xml "ReplaceProperty").
+
+![example](./images/image3.png)
+
+
+## Example 4 - AddNewElement.xml
+
+Add a new XML node.
+[Source code](https://github.com/Emmerson-Miranda/WSO2-4.9/blob/master/WSO2EnrichMediatorParentProject/EnrichMediatorESB/src/main/synapse-config/proxy-services/AddNewElement.xml "AddNewElement").
+
+![example](./images/image4.png)
+
+

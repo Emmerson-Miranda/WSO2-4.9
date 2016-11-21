@@ -5,4 +5,10 @@
     <artifact name="ReplaceElementValue" groupId="edu.emmerson.wso2.examples.mediator.enrich.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/ReplaceElementValue.xml</file>
     </artifact>
+    <artifact name="AddNewElement" groupId="edu.emmerson.wso2.examples.mediator.enrich.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/AddNewElement.xml</file>
+    </artifact>
+    <artifact name="ReplaceProperty" groupId="edu.emmerson.wso2.examples.mediator.enrich.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/ReplaceProperty.xml</file>
+    </artifact>
 </artifacts>
