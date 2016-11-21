@@ -4,13 +4,17 @@
   <target>
     <inSequence>
       <property description="myCustomProperty" name="MY_VALUE"
-        scope="default" type="STRING" value="this is a custom value"/>
-      <enrich>
+        scope="default" type="STRING" value="this is a custom value FROM a context property"/>
+      <enrich description="modifying body">
         <source clone="true" type="inline">
-          <newElement xmlns="">1234</newElement>
+          <newElement xmlns="">none</newElement>
         </source>
         <target action="child"
           xmlns:echo="http://echo.services.core.carbon.wso2.org" xpath="//container"/>
+      </enrich>
+      <enrich description="putting value">
+        <source clone="true" property="MY_VALUE" type="property"/>
+        <target xpath="//newElement/text()"/>
       </enrich>
       <respond/>
     </inSequence>
